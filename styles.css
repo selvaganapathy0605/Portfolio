@@ -18,16 +18,16 @@
 
 #success-mess {
   display: none;
+  align-items: center;
+  justify-content:space-between ;
   background-color: #4CAF50;
   color: white;
   padding: 15px;
-  position: fixed;
-  top: 20px;
-  left: 500px;
-  z-index: 1000;
   border-radius: 5px;
   gap: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 0 auto;
 }
 
 .section__container {
@@ -638,22 +638,43 @@ nav {
   gap: 1rem;
 }
 
-.footer__form input,
-.footer__form textarea {
-  flex: 1;
+.footer__form .input__row{
   width: 100%;
-  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.error{
+  text-align: end;
+  color: red;
+  padding-bottom: .4rem;
+}
+
+.footer__form .input__box{
+  width: 49%;
+}
+
+.footer__form .input__box input{
+  width: 100%;
+  background-color: transparent;
   outline: none;
   border: none;
   border-bottom: 1px solid var(--text-light);
-  font-size: 1rem;
+  padding: 0.75rem;
+  font-size: 17px;
   color: var(--white);
-  background-color: transparent;
+
 }
 
 .footer__form textarea {
   min-height: 8rem;
   margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: transparent;
+  font-size: 17px;
+  color: var(--white);
+  width: 100%;
 }
 
 .footer__form .btn {
