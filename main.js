@@ -14,39 +14,6 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-const downloadCv = document.getElementById("download-cv");
-
-downloadCv.addEventListener("click", (e) => {
-  const aElement = document.createElement("a");
-  aElement.setAttribute("download", "cv.jpg");
-  aElement.setAttribute("href", "assets/cv.jpg");
-  aElement.click();
-});
-
-  const scrollRevealOption = {
-    distance: "50px",
-    origin: "bottom",
-    duration: 1000,
-  };
-
-
-
-// ScrollReveal().reveal(".header__container h4", {
-//   ...scrollRevealOption,
-// });
-// ScrollReveal().reveal(".header__container h1", {
-//   ...scrollRevealOption,
-//   delay: 500,
-// });
-// ScrollReveal().reveal(".header__container .section__description", {
-//   ...scrollRevealOption,
-//   delay: 1000,
-// });
-// ScrollReveal().reveal(".header__container .header__btns", {
-//   ...scrollRevealOption,
-//   delay: 1500,
-// });
-
 const progressBar = document.querySelectorAll(".about__progressbar");
 
 Array.from(progressBar).forEach((bar) => {
@@ -54,27 +21,6 @@ Array.from(progressBar).forEach((bar) => {
   bar.querySelector("span").style.width = progress + "%";
 });
 
-ScrollReveal().reveal(".about__image img", {
-  ...scrollRevealOption,
-  origin: "left",
-});
-ScrollReveal().reveal(".about__content h4", {
-  ...scrollRevealOption,
-  delay: 500,
-});
-ScrollReveal().reveal(".about__content .section__description", {
-  ...scrollRevealOption,
-  delay: 1000,
-});
-ScrollReveal().reveal(".about__content .about__progress", {
-  ...scrollRevealOption,
-  delay: 1500,
-});
-
-ScrollReveal().reveal(".service__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
 
 const tabList = document.querySelector(".resume__tablist");
 
@@ -106,28 +52,3 @@ tabList.addEventListener("click", (e) => {
   );
 });
 
-const swiper = new Swiper(".swiper", {
-  slidesPerView: "auto",
-  spaceBetween: 30,
-  loop: true,
-});
-
-ScrollReveal().reveal(".blog__card", {
-  ...scrollRevealOption,
-  interval: 500,
-});
-
-
-
-const form = document.querySelector('#submit');
-const successMessage = document.querySelector('#success-mess');
-
-form.addEventListener('click', (e)=> {
-    successMessage.style.display = 'flex';
-});
-
-// document.addEventListener('click', function(event) {
-//     if (successMessage.style.display === 'flex') {
-//         successMessage.style.display = 'none';
-//     }
-// });
